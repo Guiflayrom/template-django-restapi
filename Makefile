@@ -10,10 +10,6 @@ migrate:
 migrations:
 	poetry run python -m core.manage makemigrations
 
-.PHONY: server
-server:
-	poetry run python -m core.manage runserver
-
 .PHONY: superuser
 superuser:
 	poetry run python -m core.manage createsuperuser
@@ -29,3 +25,11 @@ lint:
 .PHONY: isort
 isort: 
 	poetry run isort .
+
+.PHONY: runserver
+runserver:
+	poetry run python -m core.manage runserver
+
+.PHONY: server serve
+.ONESHELL:
+server serve: lint isort runserver
