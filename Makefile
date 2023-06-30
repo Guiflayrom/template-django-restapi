@@ -30,9 +30,9 @@ isort:
 runserver:
 	poetry run python -m core.manage runserver
 
-.PHONY: server serve
+.PHONY: server serve run
 .ONESHELL:
-server serve: lint isort runserver
+server serve run: lint isort runserver
 
 .PHONY: runprod
 runprod: 
