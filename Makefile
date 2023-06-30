@@ -33,3 +33,7 @@ runserver:
 .PHONY: server serve
 .ONESHELL:
 server serve: lint isort runserver
+
+.PHONY: runprod
+runprod: 
+	poetry run python -m hypercorn core.api.asgi:application --bind 127.0.0.1:8000 
