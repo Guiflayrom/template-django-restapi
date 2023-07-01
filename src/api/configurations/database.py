@@ -2,7 +2,7 @@ from os import getenv
 
 import dotenv
 
-from core.api.settings import DEBUG
+from src.api.settings import DEBUG
 
 dotenv.load_dotenv()
 
@@ -25,7 +25,7 @@ CACHES = {
         'LOCATION': 'redis://127.0.0.1:6379/0',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-            "PASSWORD": getenv('REDIS_PASS')
+            'PASSWORD': getenv('REDIS_PASS'),
         },
     }
 }
