@@ -35,5 +35,5 @@ runserver:
 server serve run: lint isort runserver
 
 .PHONY: runprod
-runprod: 
-	poetry run python -m hypercorn core.api.asgi:application --bind 127.0.0.1:8000 
+runprod: install migrate
+	poetry run python -m hypercorn core.api.asgi:application --bind 0.0.0.0:8000 --workers 4
