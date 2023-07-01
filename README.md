@@ -11,3 +11,6 @@
 ## Docker
 - docker build -t socio-backend .
 - docker run -d -p 8000:8000 socio-backend
+or just
+- docker compose -f docker-compose.dev.yml up -d
+- docker compose -f docker-compose.prod.yml up -d
