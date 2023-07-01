@@ -9,8 +9,13 @@
 - Finally to start you can type: `poetry run python -m core.manage runserver` or just `make serve(r)`
 
 ## Docker
-- docker build -t socio-backend .
-- docker run -d -p 8000:8000 socio-backend
-or just
+
+### To Start
+
 - docker compose -f docker-compose.dev.yml up -d
 - docker compose -f docker-compose.prod.yml up -d
+
+### To Stop
+
+- docker compose -f docker-compose.dev.yml down
+- docker compose -f docker-compose.prod.yml down
