@@ -26,9 +26,23 @@ CACHES = {
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'PASSWORD': getenv('REDIS_PASS'),
+            'COMPRESSOR': 'django_redis.compressors.zlib.ZlibCompressor',
         },
     }
 }
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('localhost', '6379')],
+        },
+    },
+}
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_CACHE_ALIAS = 'default'
+CACHE_TTL = 60 * 1
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
