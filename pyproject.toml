@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "API Zoom Para Projetos Sociais"
 authors = ["Guilherme D.A"]
 readme = "README.md"
-packages = [{include = "zoom_api_socio"}]
 
 [tool.taskipy.tasks]
 lint = "blue ."
@@ -22,6 +21,7 @@ taskipy = "^1.11.0"
 django-split-settings = "^1.2.0"
 hypercorn = "^0.14.3"
 python-dotenv = "^1.0.0"
+django-redis = "^5.3.0"
 
 
 [build-system]
