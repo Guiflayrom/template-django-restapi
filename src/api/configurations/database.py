@@ -2,7 +2,7 @@ from os import getenv
 
 import dotenv
 
-from core.api.settings import DEBUG
+from src.api.settings import DEBUG
 
 dotenv.load_dotenv()
 

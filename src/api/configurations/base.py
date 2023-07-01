@@ -1,4 +1,4 @@
-ROOT_URLCONF = 'core.api.urls'
+ROOT_URLCONF = 'src.api.urls'
 
 TEMPLATES = [
     {
@@ -16,7 +16,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.api.wsgi.application'
+WSGI_APPLICATION = 'src.api.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
